@@ -1,1 +1,0 @@
-This is a CSS Flexbox project I've made myself (by inspecting the already finished end product) while following Colt Steele's Web Developer Bootcamp Udemy course.
