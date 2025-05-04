@@ -1,1 +1,0 @@
-TV Show Search is an AJAX practice app. It uses Axios to utilize the shows API. Data is taken from "https://api.tvmaze.com"
