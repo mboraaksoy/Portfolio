@@ -1,0 +1,74 @@
+html, body{
+    margin: 0;
+    background: rgb(245, 217, 213);
+    overflow-x: hidden;
+}
+
+
+nav{
+    text-transform: uppercase;
+}
+
+.transparent-background{
+    background-color: rgba(245, 217, 213, 0.6) !important;
+}
+
+nav .navbar-brand{
+    font-size: 24px;
+    font-weight: 100;
+    color: red;
+    letter-spacing: 0.5px;
+    line-height: 30%;
+}
+
+nav .nav-item{
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+}
+
+#mynavbar a.nav-link:hover{
+    color: red;
+}
+
+h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 4em;
+    font-weight: 100;
+    line-height: 1.3;
+    letter-spacing: 2px;
+}
+
+h1 span{
+    color: red;
+}
+
+h2{
+    text-transform: uppercase;
+    color: red;
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-size: 2.5em;
+}
+
+div p{
+    width: 65%;
+    color: rgb(255, 152, 170);
+    font-size: 1.1em;
+    line-height: 2em;
+    font-weight: 200;
+}
+
+
+
+
+@media (max-width: 1200px){
+    h1{
+        font-size: 2.5em;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+}

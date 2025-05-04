@@ -1,0 +1,13 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<ul>
+    <% for (let comment of comments){ %>
+        <li>
+            <strong><%= comment.username %></strong> <%= comment.comment %>
+            <a href="/comments/<%=comment.id%>">Details</a>
+        </li>
+    <% } %>
+</ul>
+
+<%- include('../partials/footer.ejs') %>

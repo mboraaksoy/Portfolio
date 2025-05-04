@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/style.css">
+	<title>Ping Pong Score Tracker</title>
+</head>
+
+<body>
+	<h1>Ping Pong Score Keeper </h1>
+	<section class="currentScore"></section>
+	<p>Use the buttons below to keep score.</p>
+	<div class="maxScore">
+		<section>Playing To 
+			<select name="maxScoreSelect" id="maxScoreSelect">
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			</select>
+		</section>
+	</div>
+		<section class="buttons">
+			<button id="playerOneUp">+1 Player 1</button>
+			<button id="playerOneDown">-1 Player 1</button>
+			<button id="playerTwoUp">+1 Player 2</button>
+			<button id="playerTwoDown">-1 Player 2</button>
+			<button id="reset">Reset</button>
+		</section>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>

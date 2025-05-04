@@ -1,0 +1,1 @@
+Ping Pong Score Tracker is a JavaScript practice project. It has features of adding and/or subtracting to either player's score, resetting the scores and setting a max score.

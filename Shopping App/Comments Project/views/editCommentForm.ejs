@@ -1,0 +1,9 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+<h1>You're editing post with ID: <%= id %></h1>
+<h4><strong><%= username %></strong></h4>
+<form method="post" action="/comments/<%= id %>?_method=PATCH">
+    <textarea name="comment" id="comment" rows="4" cols="55"><%= comment %></textarea>
+    <button>Submit</button>
+</form>
+<%- include('../partials/footer.ejs') %>

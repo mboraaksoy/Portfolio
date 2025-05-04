@@ -1,0 +1,17 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+<h1>You're viewing post with ID: <%= id %></h1>
+<h4><strong><%= username %></strong></h4>
+<p><%= comment %></p>
+<a href="/comments/<%= id %>/edit">Edit the comment</a>
+<br>
+<form method="post" action="/comments/<%= id %>?_method=DELETE">
+    <button>Delete the Comment</button>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<a href="/comments">Back to All Comments</a>
+<%- include('../partials/footer.ejs') %>

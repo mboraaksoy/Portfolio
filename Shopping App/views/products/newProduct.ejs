@@ -1,0 +1,26 @@
+<%- include('../../partials/header.ejs') %>
+<%- include('../../partials/navbar.ejs') %>
+
+<h1>Add a New Product</h1>
+
+<form action="/products" method="post">
+    <div>
+        <label for="productName">Name: </label>
+        <input type="text" name="name" id="productName">
+    </div>
+    <div>
+        <label for="productPrice">Price: $</label>
+        <input type="text" name="price" id="productPrice">
+    </div>
+    <div>
+        <label for="productCategory">Category: </label>
+        <select name="category" id="productCategory">
+            <% for (category of categories){ %>
+                <option value="<%= category %>"><%=category%></option>
+            <% } %>
+        </select>
+    </div>
+    <button>Add</button>
+</form>
+
+<%- include('../../partials/footer.ejs') %>

@@ -1,0 +1,11 @@
+<%- include('../../partials/header.ejs') %>
+<%- include('../../partials/navbar.ejs') %>
+
+<h1><%= category %> Products</h1>
+<ul> <% for (let product of products){ %>
+    <li> <a href="/products/<%=product._id%>"> <%= product.name %> </a> </li>
+    <% } %>
+</ul>
+
+<%- include('../../partials/filterByCategory.ejs') %>
+<%- include('../../partials/footer.ejs') %>

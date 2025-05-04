@@ -1,0 +1,23 @@
+<%- include('../../partials/header.ejs') %>
+<%- include('../../partials/navbar.ejs') %>
+
+<h3><%= product.name %></h3>
+<ul>
+    <li> <b>Price:</b> $<%=  product.price %> </li>
+    <li> <b>Category:</b> <a href="/products?category=<%= product.category %>"><%= product.category %> </a> </li>
+</ul>
+
+<div>
+    <a href="/products/<%=product._id%>/edit">Edit this Product</a>
+</div>
+
+<form action="/products/<%=product._id%>?_method=DELETE" method="post">
+    <button>Delete this Product</button>
+</form>
+
+<div>
+    <a href="/products">Back to Products</a>
+</div>
+
+
+<%- include('../../partials/footer.ejs') %>

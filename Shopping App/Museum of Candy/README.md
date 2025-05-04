@@ -1,0 +1,1 @@
+This is a frontend design practice page. It is made using HTML, CSS and Bootstrap.

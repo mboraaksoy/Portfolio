@@ -1,0 +1,9 @@
+<div>
+    Filter:
+    <select name="categoryFilter" id="categoryFilter">
+            <option value="all">All</option>
+        <% for (cat of categories){ %>
+            <option value="<%= cat %>" <%= cat === category ? 'selected' : '' %> > <%= cat %></option>
+        <% } %>
+    </select>
+</div>

@@ -1,0 +1,1 @@
+A shopping app project where all products can be shown, filtered by their category, edited, deleted. New products can also be added. This is essentially an Express and Mongoose practice project, no frontend included.

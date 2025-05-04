@@ -1,0 +1,1 @@
+This project is a Comments CRUD (Create, Read, Update, Destroy) app for Express.js practice. Its routing design is RESTful.
