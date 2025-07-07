@@ -1,0 +1,14 @@
+@media (max-width: 991.98px) {
+    .edit-campground-container{
+        width: 100%;
+        margin-left: 0;
+    }
+    .edit-campground-btns {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 2rem;
+    }
+    .edit-campground-btn {
+        width: 40%;
+    }
+}

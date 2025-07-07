@@ -1,0 +1,38 @@
+<% layout('layouts/boilerplate.ejs') %>
+<script src="https://cdn.maptiler.com/maptiler-geocoding-control/v2.1.4/maptilersdk.umd.js"></script>
+<link href="https://cdn.maptiler.com/maptiler-geocoding-control/v2.1.4/style.css" rel="stylesheet" crossorigin="anonymous">
+
+<div id="map" class="cluster-map mb-3"></div>
+<h1 class="mb-4">All Campgrounds</h1>
+<div class="campgrounds-container">
+        <% for (campground of initialCampgrounds) { %>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="<%= campground.images[0].url %>" alt="" class="img-fluid index-image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= campground.title %></h5>
+                            <p class="card-text" id="campgroundDescription"><%= campground.description %></p>
+                            <p class="card-text">
+                                <small class="text-muted"><%= campground.location %></small>
+                            </p>
+                            <div class="view-btn-container">
+                                <a class="btn btn-primary" href="/campgrounds/<%= campground._id %>">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+</div>
+
+<script>
+    const mapTilerApiKey = '<%- process.env.MAPTILER_API_KEY %>'
+    const initialCampgrounds = { features: <%- JSON.stringify(initialCampgrounds) %> }
+    const mapData = { features: <%- JSON.stringify(mapData) %> }
+
+</script>
+<script src="/js/clusterMap.js"></script>
+<script src="/js/infiniteScroll.js"></script>

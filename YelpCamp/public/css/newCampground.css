@@ -1,0 +1,33 @@
+.left-column {
+    margin-right: 8.3%
+}
+
+.add-campground-btn {
+    margin-right: 5%;
+}
+
+@media (max-width: 991.98px) {
+    .left-column, .right-column, .new-campground-map {
+        min-width: 100%;
+    }
+
+    .left-column {
+        margin-right: 0;
+    }
+
+    .right-column {
+        margin-left: 0;
+    }
+    
+    .new-campground-btns {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 2rem;
+    }
+    
+    .new-campground-map{
+        width: 100%;
+        height: 60vh;
+    }
+    
+}

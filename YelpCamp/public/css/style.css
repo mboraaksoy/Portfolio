@@ -1,0 +1,114 @@
+html, body{
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+p#campgroundDescription {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.user-icon {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
+img.index-image {
+    width: 350px;
+    height: 300px;
+}
+
+img.seed-image {
+    width: 200px;
+    height: 200px;
+}
+
+.campground-details-map {
+    width: 100%;
+    height: 40vh;
+}
+
+.cluster-map {
+    width: 100%;
+    height: 50vh;
+}
+
+.new-campground-map{
+    width: 100%;
+    height: 40vh;
+}
+
+.maplibregl-popup-content {
+    white-space: nowrap;
+    width: max-content;
+}
+
+.yelpcamp-brand {
+    margin-right: 0;
+    display: flex;
+    justify-content: start;
+}
+
+.navbar-toggler-container {
+    display: none;
+}
+
+p.username {
+    color: white;
+    margin: 0 1rem 0 0;
+}
+
+.navbar-container {
+    padding: 0;
+}
+
+.login-register-inner-div {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 991.98px) {
+    .yelpcamp-brand {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+    }
+    .navbar-toggler-container{
+        display: flex;
+        width: 25%;
+        position: absolute;
+        right: 0;
+    }
+
+    .middle-btns {
+        align-items: center;
+    }
+
+    .auth-btns{
+        justify-content: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+    
+    .view-btn-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .login-register-outer-div {
+        margin-right: 0;
+    }
+
+    .login-register-inner-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

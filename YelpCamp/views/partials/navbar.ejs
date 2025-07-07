@@ -1,0 +1,45 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid navbar-container">
+        <div class="container">
+            <div class="row">
+                <a class="navbar-brand yelpcamp-brand col-lg-3" href="/">YelpCamp</a>
+                <div class="navbar-toggler-container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse col-lg-9" id="navbarSupportedContent">
+                    <ul class="navbar-nav col-lg-8 mb-lg-0 middle-btns justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/campgrounds" id="campgroundId">Campgrounds</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/campgrounds/new">New Campground</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about" id="aboutId">About</a>
+                        </li>
+                    </ul>
+                    <div class="col-lg-4 d-flex justify-content-end navbar-nav login-register-outer-div">
+                        <% if (currentUser){ %>
+                            <form action="/logout" method="post" class="d-flex flex-row align-items-center auth-btns">
+                                <img src="https://cdn-icons-png.flaticon.com/128/64/64572.png" class="me-2 user-icon" alt="Placeholder user icon">
+                                <p class="username">
+                                    <%= currentUser.username %>
+                                </p>
+                                <button class="nav-link auth-btn" id="logoutButton">Logout</button>
+                            </form>
+                            <% } else { %>
+                                <div class="align-items-center login-register-inner-div">
+                                    <a class="nav-link auth-btn" href="/login">Login</a>
+                                    <a class="nav-link auth-btn" href="/register">Register</a>
+                                </div>
+                                <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

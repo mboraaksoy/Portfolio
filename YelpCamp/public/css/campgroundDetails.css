@@ -1,0 +1,17 @@
+.left-column {
+    margin-right: 8.3%
+}
+
+@media (max-width: 991.98px) {
+    .left-column, .right-column, .campground-details-map {
+        min-width: 100%;
+    }
+
+    .left-column {
+        margin-right: 0;
+    }
+
+    .right-column {
+        margin-left: 0;
+    }
+}

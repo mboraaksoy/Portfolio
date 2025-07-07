@@ -1,0 +1,78 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+<script src="https://cdn.maptiler.com/maptiler-geocoding-control/v2.1.4/maptilersdk.umd.js"></script>
+<link href="https://cdn.maptiler.com/maptiler-geocoding-control/v2.1.4/style.css" rel="stylesheet" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/newCampground.css">
+
+<div class="container">
+    <h1 class="text-center mb-5">New Campground</h1>
+    <form action="/campgrounds" method="post" class="validated-form row" novalidate enctype="multipart/form-data">
+        <div class="col-4 left-column">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" name="title" id="title" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a title!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" name="location" id="location" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a location!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Choose image(s)</label>
+                <input class="form-control" type="file" id="image" name="image" multiple>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="price">Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="number" class="form-control" placeholder="0.00" aria-label="price"
+                        aria-describedby="price-label" name="price" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a price!
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control form-control-lg" type="text" name="description" id="description"
+                    required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a description!
+                </div>
+            </div>
+            <input type="hidden" name="coordsLatitude" id="coordsLatitude">
+            <input type="hidden" name="coordsLongitude" id="coordsLongitude">
+        </div>
+        <div class="col-7 right-column">
+            <div id="map" class="new-campground-map mb-3"></div>
+        </div>
+        <div class="mt-5 d-flex justify-content-center new-campground-btns">
+            <button class="btn btn-primary new-campground-btn add-campground-btn">Add Campground</button>
+            <a class="btn btn-success new-campground-btn" href="/campgrounds">Back to Campgrounds</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    const mapTilerApiKey = '<%- process.env.MAPTILER_API_KEY %>'
+</script>
+<script src="/js/newCampgroundMap.js"></script>
+
+

@@ -1,0 +1,105 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://images.unsplash.com/photo-1559521783-1d1599583485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.5);
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-link.active {
+    color: white;
+    border-bottom-color: white;
+
+}
+
+.btn-secondary,
+.btn-secondary:hover {
+    color: #333;
+    text-shadow: none;
+}
+
+.btn-link {
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inherit;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+.middle-btns > :first-child {
+    margin-left: 0;
+}
+
+.yelpcamp-brand {
+    margin-right: 0;
+    display: flex;
+    justify-content: start;
+}
+
+@media (max-width: 991.98px) {
+    h3 {
+        font-size: calc(1.6rem + 1.5vw);
+    }
+    .yelpcamp-brand {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+    }
+    .navbar-toggler-container{
+        position: absolute;
+        right: 0;
+    }
+
+    .collapse-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .middle-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .auth-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    p.lead{
+        font-size: 1rem;
+    }
+
+    .middle-btn, .auth-btn, .logout-btn {
+        margin: 0;
+    }
+    
+
+    /* #navbarContent {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    } */
+}
