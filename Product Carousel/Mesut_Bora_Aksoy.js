@@ -144,13 +144,13 @@ const productCarousel = async () => {
     prevButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
     nextButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
     prevButton.style.left = `${products.getBoundingClientRect().left - 60}px`; // px mismatch because of 15px x padding
-    nextButton.style.left = `${products.getBoundingClientRect().right}px`; // px mismatch because of 15px x padding
+    nextButton.style.left = `${products.getBoundingClientRect().right + 10}px`; // px mismatch because of 15px x padding
 
     window.addEventListener('resize', () => {
         prevButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
         nextButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
         prevButton.style.left = `${products.getBoundingClientRect().left - 60}px`;
-        nextButton.style.left = `${products.getBoundingClientRect().right}px`;
+        nextButton.style.left = `${products.getBoundingClientRect().right + 10}px`;
     })
 
     let index = 0, scrollX = 0;
