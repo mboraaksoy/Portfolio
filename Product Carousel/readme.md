@@ -1,0 +1,1 @@
+This is an example product carousel app. Designed for both mobile and desktop, it is fully responsive.

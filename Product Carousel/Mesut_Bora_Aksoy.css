@@ -155,17 +155,17 @@ img {
     }
 
     .productWrapper {
-        width: 200px;
-        height: 430px;
+        width: 150px;
+        height: 330px;
     }
 
     img {
-        width: 190px;
+        width: 140px;
     }
 
     .carouselWrapper,
     .heroBanner {
-        width: 420px;
+        width: 320px;
     }
 
 
@@ -179,7 +179,7 @@ img {
     }
 
     .productWrapper:last-of-type{
-        margin-right: 50px;
+        margin-right: 150px;
     }
 }
 
