@@ -100,8 +100,9 @@ const productCarousel = async () => {
                 marginTop: '8px',
                 paddingLeft: '10px'
             });
-            
+
         }
+
         products.append(productWrapper);
 
         favButton.addEventListener('click', (evt) => {
@@ -137,6 +138,17 @@ const productCarousel = async () => {
     prevButton.append(prevIcon);
     nextButton.append(nextIcon);
     carouselWrapper.append(prevButton, nextButton);
+
+    prevButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
+    nextButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
+    prevButton.style.left = `${products.getBoundingClientRect().left - 60}px`;
+    nextButton.style.left = `${products.getBoundingClientRect().right + 10}px`;
+    window.addEventListener('resize', () => {
+        prevButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
+        nextButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
+        prevButton.style.left = `${products.getBoundingClientRect().left - 60}px`;
+        nextButton.style.left = `${products.getBoundingClientRect().right + 10}px`;
+    })
 
     let index = 0, scrollX = 0;
     let productWidth = babyBanner.getBoundingClientRect().width + 20; // 20px is the gap
