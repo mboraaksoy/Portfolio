@@ -142,7 +142,7 @@ img {
 
     section,
     main {
-        width: 490px;
+        width: 470px;
     }
 }
 
@@ -155,17 +155,17 @@ img {
     }
 
     .productWrapper {
-        width: 150px;
-        height: 330px;
+        width: 200px;
+        height: 430px;
     }
 
     img {
-        width: 140px;
+        width: 190px;
     }
 
     .carouselWrapper,
     .heroBanner {
-        width: 320px;
+        width: 420px;
     }
 
 
@@ -175,10 +175,11 @@ img {
 
     .productName {
         font-size: 12px;
+        padding-right: 5px;
     }
 
     .productWrapper:last-of-type{
-        margin-right: 10px;
+        margin-right: 50px;
     }
 }
 
