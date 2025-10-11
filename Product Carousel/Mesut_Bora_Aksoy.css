@@ -23,7 +23,6 @@ section.heroBanner {
 
 main.carouselWrapper {
     overflow: hidden;
-    padding: 0 15px 0;
     font-family: 'Quicksand';
 }
 
@@ -39,6 +38,7 @@ h2 {
 
 .productWrapper {
     position: relative;
+    height: 400px;
 }
 
 img {
@@ -84,7 +84,7 @@ img {
 }
 
 .productName {
-    font-size: 0.9em;
+    font-size: 13px;
 }
 
 .addButton {
@@ -113,29 +113,81 @@ img {
 }
 
 .currentPrice {
-    margin-top: auto
+    margin-top: auto;
+    font-size: '18px',
 }
 
-.sepette{
+.sepette {
     font-size: 10px;
     line-height: 1.6;
     margin: 0;
 }
 
-@media (min-width: 800px) {
+@media (max-width: 1140px) {
 
     section,
     main {
-        width: 600px;
+        width: 720px;
+    }
+
+    .products {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
     }
 
 }
 
-@media (min-width: 1280px) {
+@media (max-width: 850px) {
 
     section,
     main {
-        width: 750px;
+        width: 490px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    #babyBanner,
+    .prevButton,
+    .nextButton {
+        display: none;
+    }
+
+    .productWrapper {
+        width: 150px;
+        height: 330px;
+    }
+
+    img {
+        width: 140px;
+    }
+
+    .carouselWrapper,
+    .heroBanner {
+        width: 320px;
+    }
+
+
+    .currentPrice {
+        font-size: 12px,
+    }
+
+    .productName {
+        font-size: 12px;
+    }
+
+    .productWrapper:last-of-type{
+        margin-right: 10px;
+    }
+}
+
+
+@media (min-width: 1141px) {
+
+    section,
+    main {
+        width: 960px;
     }
 }
 

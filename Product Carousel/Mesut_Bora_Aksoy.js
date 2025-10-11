@@ -44,7 +44,6 @@ const productCarousel = async () => {
         favTrueIcon.classList.add('fa-solid', 'fa-heart', 'favTrueIcon');
         const name = document.createElement('p');
         name.classList.add('productName');
-        const rating = document.createElement('div');
         const currentPrice = document.createElement('p');
         currentPrice.classList.add('currentPrice');
         const addButton = document.createElement('button');
@@ -62,28 +61,31 @@ const productCarousel = async () => {
         if (!e.isFav) favButton.append(favFalseIcon);
         else favButton.append(favTrueIcon);
 
-        productWrapper.style.height = '400px';
 
         name.innerHTML = `<b class="brandName">${e.brand} -</b> ${e.name}`;
-        Object.assign(name.style, {
-            fontSize: '13px',
-            paddingLeft: '10px'
-        })
         name.style.paddingLeft = '10px';
 
-        currentPrice.innerText = `${e.price} TL`;
+        const wholeNumberCurrent = JSON.stringify(e.price).split('.')[0];
+        const decimalNumberCurrent = JSON.stringify(e.price).split('.')[1];
+
+        currentPrice.innerHTML = `<span style="font-size: 24px";>${wholeNumberCurrent}</span>,${decimalNumberCurrent} TL`;
         Object.assign(currentPrice.style, {
             innerText: `${e.price} TL`,
-            fontSize: '18px',
             fontWeight: '500',
-            paddingLeft: '10px'
+            paddingLeft: '10px',
+            margin: 'auto 0 10px 0'
         });
+
+
+
 
         productWrapper.append(img, favButton, name, currentPrice, addButton);
         if (originalPrice) {
             productWrapper.append(originalPrice);
 
-            originalPrice.innerHTML = `${e.original_price} TL`;
+            const wholeNumberOriginal = JSON.stringify(e.original_price).split('.')[0];
+            const decimalNumberOriginal = JSON.stringify(e.original_price).split('.')[1];
+            originalPrice.innerHTML = `${wholeNumberOriginal},${decimalNumberOriginal} TL`;
             Object.assign(originalPrice.style, {
                 order: 1,
                 fontSize: '12px',
@@ -92,12 +94,12 @@ const productCarousel = async () => {
                 paddingLeft: '10px'
             });
 
-            currentPrice.innerHTML = `<p class="sepette">Sepette</p> ${currentPrice.innerText}`;
+            currentPrice.innerHTML = `<p class="sepette">Sepette</p> ${currentPrice.innerHTML}`;
             Object.assign(currentPrice.style, {
                 order: 2,
                 color: '#00A365',
                 fontWeight: '800',
-                marginTop: '8px',
+                margin: '8px 0 10px 0',
                 paddingLeft: '10px'
             });
 
@@ -141,13 +143,14 @@ const productCarousel = async () => {
 
     prevButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
     nextButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
-    prevButton.style.left = `${products.getBoundingClientRect().left - 60}px`;
-    nextButton.style.left = `${products.getBoundingClientRect().right + 10}px`;
+    prevButton.style.left = `${products.getBoundingClientRect().left - 60}px`; // px mismatch because of 15px x padding
+    nextButton.style.left = `${products.getBoundingClientRect().right}px`; // px mismatch because of 15px x padding
+
     window.addEventListener('resize', () => {
         prevButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
         nextButton.style.top = `${products.getBoundingClientRect().bottom - (products.getBoundingClientRect().height / 2)}px`;
         prevButton.style.left = `${products.getBoundingClientRect().left - 60}px`;
-        nextButton.style.left = `${products.getBoundingClientRect().right + 10}px`;
+        nextButton.style.left = `${products.getBoundingClientRect().right}px`;
     })
 
     let index = 0, scrollX = 0;
