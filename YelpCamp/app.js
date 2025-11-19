@@ -17,7 +17,7 @@ const rateLimit = require('express-rate-limit');
 const ExpressError = require('./utilities/ExpressError.js');
 const sanitizeV5 = require('./utilities/mongoSanitizeV5.js');
 const cspConfig = require('./utilities/cspConfig.js');
-const {rateLimitConfig} = require('./utilities/rateLimitConfig.js');
+const { rateLimitConfig } = require('./utilities/rateLimitConfig.js');
 
 const User = require('./models/user.js');
 
@@ -27,7 +27,10 @@ const userRoutes = require('./routes/users.js');
 
 const dbUrl = process.env.DB_URL;
 
-mongoose.connect(dbUrl); // 'mongodb://127.0.0.1:27017/yelp-camp'
+mongoose.connect(dbUrl, {
+    tls: true,
+    tlsAllowInvalidCertificates: false,
+}); // 'mongodb://127.0.0.1:27017/yelp-camp'
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'DB Connection error:'));
 db.once('open', () => console.log('DB successfully connected.'));
