@@ -17,13 +17,15 @@ const styleSrcUrls = [
 ];
 const connectSrcUrls = [
     "https://api.maptiler.com/",
+    "https://cdn.maptiler.com/",
+    "https://cdn.jsdelivr.net/"
 ];
 
 const fontSrcUrls = [];
 
 const cspConfig = {
     directives: {
-        defaultSrc: [],
+        defaultSrc: ["'self'"],
         connectSrc: ["'self'", ...connectSrcUrls],
         scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
         styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
